@@ -91,10 +91,10 @@ class SwipeButton extends React.Component {
       onSwipeFail,
       onSwipeStart,
       onSwipeSuccess,
+      resetSwipe,
       railBackgroundColor,
       railBorderColor,
       railFillBackgroundColor,
-      s,
       railFillBorderColor,
       swipeSuccessThreshold,
       thumbIconBackgroundColor,
@@ -143,6 +143,7 @@ class SwipeButton extends React.Component {
             iconSize={height}
             layoutWidth={this.state.layoutWidth}
             onSwipeFail={onSwipeFail}
+            resetSwipe={resetSwipe}
             onSwipeStart={onSwipeStart}
             onSwipeSuccess={onSwipeSuccess}
             railFillBackgroundColor={railFillBackgroundColor}

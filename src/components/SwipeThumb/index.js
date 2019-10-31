@@ -30,6 +30,7 @@ class SwipeThumb extends React.Component {
     this.onPanResponderStart = this.onPanResponderStart.bind(this);
     this.onPanResponderMove = this.onPanResponderMove.bind(this);
     this.onPanResponderRelease = this.onPanResponderRelease.bind(this);
+    this.resetSwipe = this.resetSwipe.bind(this);
     this.onSwipeMetSuccessThreshold = this.onSwipeMetSuccessThreshold.bind(
       this,
     );
@@ -83,6 +84,10 @@ class SwipeThumb extends React.Component {
     if (this.props.onSwipeStart) {
       this.props.onSwipeStart();
     }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.resetSwipe(nextProps)
   }
 
   onPanResponderMove(event, gestureState) {
@@ -153,6 +158,10 @@ class SwipeThumb extends React.Component {
         borderColor: TRANSPARENT_COLOR,
       });
     }
+  }
+
+  resetSwipe(_resetSwipe) {
+    _resetSwipe && this.reset()
   }
 
   renderThumbIcon() {
