@@ -94,6 +94,7 @@ class SwipeButton extends React.Component {
       railBackgroundColor,
       railBorderColor,
       railFillBackgroundColor,
+      s,
       railFillBorderColor,
       swipeSuccessThreshold,
       thumbIconBackgroundColor,
